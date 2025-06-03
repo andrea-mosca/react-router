@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function PostListPage() {
   const [posts, setPosts] = useState([]);
@@ -23,6 +24,9 @@ export default function PostListPage() {
               />
               <div className="card-body">
                 <p className="card-text">{post.content}</p>
+              </div>
+              <div>
+                <Link to={`/posts/${post.id}`}>dettagli</Link>
               </div>
             </div>
           </div>
